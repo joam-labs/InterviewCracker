@@ -5,10 +5,10 @@ const AddCard = () => {
   return (
     <>
       <div class = "addCard">
-        <input type="date" name="" id=""/>
+
         <input>Interview date: </input> 
         <input>Interview contact: </input>
-        
+
         <label for = "behaveqs">Behavioral Qs:</label>
         <textarea name="behaveqs" id="behaveqs" cols="30" rows="10"></textarea>
 

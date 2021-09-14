@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 
 const FeedCard = () => {
+  
+  return (
 
-  // return ()
+  )
 }
 
 export default FeedCard;
