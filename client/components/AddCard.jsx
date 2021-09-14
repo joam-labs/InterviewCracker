@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const AddCard = () => {
   // event to input details, passed down through add company from user container
