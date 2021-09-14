@@ -7,31 +7,6 @@ const cardsController = {};
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 module.exports = cardsController;
 
 

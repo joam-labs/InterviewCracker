@@ -1,25 +1,30 @@
 const express = require('express');
 const path = require('path');
 const PORT = 3333;
-const cors = require('cors');
+// const cors = require('cors');
 const bodyParser = require('body-parser');
 
 //import controllers
-const usersController = require('./controllers/usersController.js');
-const companyController = require('./controllers/companyController.js');
-const cardsController = require('./controllers/cardsController.js');
+const usersController = require('./controllers/userController.js');
+// const companyController = require('./controllers/companyController.js');
+// const cardsController = require('./controllers/cardsController.js');
 
 const app = express();
 
 // parsing request body application/json
 app.use(express.json());
 app.use(bodyParser.json())
-app.use(cors());
+// app.use(cors());
 
 //Route handler
-app.use('/api/users', usersController);
-app.use('/api/company', companyController);
-app.use('/api/cards', cardsController);
+app.get('/api/users', usersController.getAllUsers, (req, res)=>{
+  res.status(200).json(res.locals.allUsers);
+});
+app.post('/api/users', usersController.addUser, (req, res)=>{
+    res.status(200).json(res.locals.username);
+  });
+// app.use('/api/company', companyController);
+// app.use('/api/cards', cardsController);
 
 // Global error handler
 app.use(function (err, req, res, next) {
