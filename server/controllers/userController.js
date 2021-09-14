@@ -43,7 +43,7 @@ userController.verifyUser = async (req, res, next) => {
     return next({
       status: 500,
       message:
-        'Could not sign up user with that username and password. Do you already have an account?',
+        'Could not verify user',
     });
   }
 };
@@ -62,7 +62,7 @@ userController.getAllUsers = async (req, res, next) => {
     return next({
       status: 500,
       message:
-        'Could not sign up user with that username and password. Do you already have an account?',
+        'Could not get all users',
     });
   }
 };

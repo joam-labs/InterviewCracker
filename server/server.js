@@ -7,12 +7,13 @@ const bodyParser = require('body-parser');
 //import controllers
 const usersController = require('./controllers/userController.js');
 // const companyController = require('./controllers/companyController.js');
-// const cardsController = require('./controllers/cardsController.js');
+// const cardsController = require('./contlrolers/cardsController.js');
 
 const app = express();
 
 // parsing request body application/json
 app.use(express.json());
+app.use(bodyParser.urlencoded());
 app.use(bodyParser.json())
 // app.use(cors());
 
