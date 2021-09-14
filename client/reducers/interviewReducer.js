@@ -4,28 +4,28 @@ const initialState = {
   
 };
 
-const whatStateWillLookLikeAfterABunchOfEntriesAnnieStyledVariable = {
-    user: [
-        company1: {
-          company: Codesmith,
-          team: bitches,
-          role: jr btch,
-          phoneCard: {interviewDate, interviewContact, responded, accepted: boolean}
-        },
-        company2: {
-          company: DataDog,
-          team: dogs,
-          role: jr dog,
-          phoneCard: {interviewDate, interviewContact, responded, accepted: boolean}
-        },
-        company3: {
-          company: traderJoes,
-          team: lovelypeople,
-          role: jr btch,
-          phoneCard: {interviewDate, interviewContact, responded, accepted: boolean}
-        }
-    ]
-}
+// const whatStateWillLookLikeAfterABunchOfEntriesAnnieStyledVariable = {
+//     user: [
+//         company1: {
+//           company: Codesmith,
+//           team: bitches,
+//           role: jr btch,
+//           phoneCard: {interviewDate, interviewContact, responded, accepted: boolean}
+//         },
+//         company2: {
+//           company: DataDog,
+//           team: dogs,
+//           role: jr dog,
+//           phoneCard: {interviewDate, interviewContact, responded, accepted: boolean}
+//         },
+//         company3: {
+//           company: traderJoes,
+//           team: lovelypeople,
+//           role: jr btch,
+//           phoneCard: {interviewDate, interviewContact, responded, accepted: boolean}
+//         }
+//     ]
+// }
 
 const interviewReducer = (state = initialState, action) => {
 
