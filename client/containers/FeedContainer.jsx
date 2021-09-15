@@ -21,7 +21,6 @@ const FeedContainer = () => {
   // iterate by date through database, render a feed card for each of entries
   return (
     <>
-      <p>Scrolling feed</p>
       <NavBar />
       <div className="wrapper__feed">
         {feedArray}

@@ -31,7 +31,7 @@ const AddCard = ( { stage, id, setShowAddCard }) => {
 
   return (
     <>
-      <div className="addCard">
+      <div className="addCard2">
         
         <label htmlFor='Date'>Date of Interview</label>
         <input type="text" id='Date' onChange={e => setDate(e.target.value)} />

@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 #navBar{
-  background-color: #48c76a;
+  background-color: $lighter-blue;
   display: flex;
   list-style-type: none;
   text-decoration: none;
@@ -9,12 +11,13 @@
 }
 
 a{
-  color: #c78548;
+  color: $darker-blue;
   text-decoration:none;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 
 a:hover{
-  color: white;
+  color: $pink;
 }
   

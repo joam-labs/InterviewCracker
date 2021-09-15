@@ -7,10 +7,11 @@
   
 }
 .addCompanyBtn{
-  margin-bottom: 3rem;
-  margin-left: 1rem;
-  padding: 5px;
+  margin-left: 3rem;
+  margin-top: 3rem;
+  padding: 15px;
   border-radius: 5px;
+  background-color: $lighter-blue;
 }
 
 .addCompany{
@@ -22,6 +23,7 @@
 }
 .addCompany > label{
   margin: 20px;
+  font-weight: bold;
 }
 
 .addCompany > input {
@@ -43,7 +45,7 @@
   border: 1px solid #f1f1f1;
   border-radius: 15px;
   width: 30%;
-  background-color: rgb(4, 151, 139);
+  background-color: $pink;
 }
 
 .header{
@@ -58,9 +60,7 @@
 
 .details{
   text-align: center;
-   width: 18%;
-   border: solid 1px white;
-
+  width: 18%;
 }
 
 #test{
@@ -69,3 +69,41 @@
   justify-content: space-evenly;
   
 }
+
+.openAddCard{
+  background-color: $lighter-blue;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.white{
+  color:#e0f5ff;
+  margin: .5rem;
+}
+
+.addCard2{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+
+.addCard2 > label{
+  margin: 1rem;
+}
+
+.addCard2 > input{
+  padding: 10px;
+  border-radius: 0.5rem;
+  margin-bottom: 10px;
+  width: 80%;
+  
+}
+
+.addCard2 > button{
+  width: 30%;
+  margin-top: 1rem;
+  padding: 7px;
+  border-radius: 5px;
+}
+

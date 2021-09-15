@@ -23,9 +23,9 @@ const CompanyRow = ( { bigData } ) => {
   return (
     <div className='companyRow'>
       <div className='companyCol'>
-        <div id='companyName'>Company: {company_name}</div>  
-        <div id='teamName'>Team: {team}</div>  
-        <div id='roleName'>Role: {role_details}</div>
+        <div id='companyName'><span className ='bold'>Company:</span><span className="white">  {company_name}</span></div>  
+        <div id='teamName'><span className ='bold'>Team: </span> <span className="white">  {team}</span></div>  
+        <div id='roleName'><span className ='bold'>Role: </span> <span className="white">  {role_details}</span></div>
       </div>
       <div className="card__wrapper">
       <div className='cardCol'>
