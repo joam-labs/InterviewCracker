@@ -38,6 +38,7 @@ const UserContainer = () => {
           <AddCompany companyBool={setNewCompany}/>
         </div>
       }
+      <DetailCard />
     </div>
   )
 }

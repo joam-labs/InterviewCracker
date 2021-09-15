@@ -1,44 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 
 const DetailCard = () => {
-
+//placeholder state
+  const [company, setCompany] = useState('Dilly');
+  const [team, setTeam] = useState('Dally');
+  const [role, setRole] = useState('Doo');
+  const [algoQs, setAlgoQs] = useState('How would you solve a astronautical problem as an astronaut if you were not an astronaut?')
+  const [systemDesignQs, setSystemDesignQs] = useState('Walk through the process of building the largest Lego tower that you can fathom.')
+  const [behaveQs, setBehaveQs] = useState('Tell me about a family vacation during which you had to handle two family members getting mad at each other.')
   // deconstruct props to pass down questions in different sections?
   return (
     <>
-      <div id = "DetailsCard">
+      <div id = "detailsCard">
         <div id = "Identifiers">
-          <p>Company: </p>
-          <p>Team: </p>
-          <p>Role: </p>
+          <p>Company: {company}</p>
+          <p>Team: {team}</p>
+          <p>Role: {role}</p>
         </div>
 
         <div className="Questions">
-          <ol>
-            {/* //loop through array of behavior questions passed down and render a list item for each */}
-            1.
-            2.
-            3.
-          </ol>
-        </div>
-        
-        <div className="Questions">
-          <ol>
-            {/* //loop through array of algo questions passed down and render a list item for each */}
-            1.
-            2.
-            3.
-          </ol>
-        </div>
-
-        <div className="Questions">
-          <ol>
-            {/* //loop through array of system questions passed down and render a list item or each */}
-            1.
-            2.
-            3.
-          </ol>
-        </div>
-        
+          <p>Algo Questions: {algoQs}</p>
+          <p>SysDes Questions: {systemDesignQs}</p>
+          <p>Behavioral Questions: {behaveQs}</p>
+        </div>  
       </div>
     </>
   )
