@@ -6,12 +6,12 @@ const SimpleCard = () => {
 
   return (
     <>
-    <div class = "simpleCard">
+    <div className="simpleCard">
       <p>Interview date: </p> 
       <p>Interview contact: </p>
     </div>
 
-    <div class = "statusLights">
+    <div className="statusLights">
       <input type = "checkbox"></input>
       <input type = "checkbox"></input>
       <input type = "checkbox"></input>

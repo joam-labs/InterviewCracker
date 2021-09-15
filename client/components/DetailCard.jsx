@@ -12,7 +12,7 @@ const DetailCard = () => {
           <p>Role: </p>
         </div>
 
-        <div class = "Questions">
+        <div className="Questions">
           <ol>
             {/* //loop through array of behavior questions passed down and render a list item for each */}
             1.
@@ -21,7 +21,7 @@ const DetailCard = () => {
           </ol>
         </div>
         
-        <div class = "Questions">
+        <div className="Questions">
           <ol>
             {/* //loop through array of algo questions passed down and render a list item for each */}
             1.
@@ -30,7 +30,7 @@ const DetailCard = () => {
           </ol>
         </div>
 
-        <div class = "Questions">
+        <div className="Questions">
           <ol>
             {/* //loop through array of system questions passed down and render a list item or each */}
             1.
