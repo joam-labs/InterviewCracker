@@ -9,16 +9,12 @@ const FeedContainer = () => {
 
   useEffect(() => {
     axios.get('/api/cards') // to this endpoint, we need modified query to include company name, team, role
-      .then(data => {
-        setFeedItems(data)
-      })
+      .then(data => setFeedItems(data))
       .catch(error => console.log('Error in FeedContainer useEffect: ', error))
-  }, [])
-  console.log('These are feed items', feedItems)
+    }, [])
+  
   const data = feedItems.data
-  if(data) {
-    feedArray = data.map(item => <FeedCard key = {item.id} everything = {item}/>)
-  }
+  if(data) feedArray = data.map(item => <FeedCard key = {item.id} everything = {item}/>)
         // const render = feedItems.map(el => {
   //   return <FeedCard />
   // })
@@ -27,7 +23,9 @@ const FeedContainer = () => {
     <>
       <p>Scrolling feed</p>
       <NavBar />
-      {feedArray}
+      <div className="wrapper__feed">
+        {feedArray}
+      </div>
     </>
   )
 }
