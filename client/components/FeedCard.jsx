@@ -1,25 +1,40 @@
 import React from "react";
 
-const FeedCard = () => {
+const FeedCard = ({everything}) => {
   //take from store
   // display all details, maybe load a bunch at a time but not all ?
   // logic goes here, 
+  console.log('Inside feedCard', everything)
+ const {
+   id, 
+   company_id, 
+   interviewstage, 
+   date, 
+   behavioral_questions, 
+   acceptstatus, 
+   algo_questions, 
+   followupstatus, 
+   rejectstatus, 
+   system_design 
+  } = everything;
+ 
   return (
-
     <>
-      <p>Date:</p>
-      <p>Company:</p>
+    <div className = 'feedCards'>
+      <p>Date: {date}</p>
+      <p>Company: </p>
       <p>Team: </p>
-
-      <h5>Algo problems</h5>
+      <p>Role: </p>
+      <h2>Algo problems</h2>
       {/* loop through algo problems and render a list item for each*/}
-      
-      <h5>Behavior questions</h5> 
+        {algo_questions}
+      <h2>Behavior questions</h2> 
       {/* loop through behavior problems and render a list item for each*/}
-
-      <h5>System design questions</h5> 
+        {behavioral_questions}
+      <h2>System design questions</h2> 
       {/* loop through system design problems and render a list item for each*/}
-      
+        {system_design}
+    </div>
     </>
   )
 }

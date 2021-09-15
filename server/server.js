@@ -4,10 +4,11 @@ const PORT = 3333;
 // const cors = require('cors');
 const bodyParser = require('body-parser');
 
+const cookieParser = require('cookie-parser');
 //import controllers
 const usersController = require('./controllers/userController.js');
-// const companyController = require('./controllers/companyController.js');
-// const cardsController = require('./contlrolers/cardsController.js');
+const companyController = require('./controllers/companyController.js');
+const cardsController = require('./controllers/cardsController.js');
 
 const app = express();
 
@@ -16,14 +17,33 @@ app.use(express.json());
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json())
 // app.use(cors());
+app.use(cookieParser());
+
 
 //Route handler
 app.get('/api/users', usersController.getAllUsers, (req, res)=>{
   res.status(200).json(res.locals.allUsers);
 });
+
 app.post('/api/users', usersController.addUser, (req, res)=>{
-    res.status(200).json(res.locals.username);
-  });
+  res.status(200).json(res.locals.username);
+});
+
+app.post('/api/company/addCompany', companyController.addCompany, (req, res) => {
+  res.status(200);
+})
+
+app.post('/api/login', usersController.verifyUser , async (req, res)=>{
+  res.status(200).send('done');//route for logining
+})
+
+app.get('/api/companies', companyController.getAllData, async (req, res)=>{
+ res.status(200).json(res.locals.data);//route for getting all the companies and cards all together but objects have cards only belonging to this companies
+});
+
+app.get('/api/cards', cardsController.getAllCards, async (req, res)=>{
+  res.status(200).json(res.locals.cards);//route for getting all cards
+ })
 // app.use('/api/company', companyController);
 // app.use('/api/cards', cardsController);
 
