@@ -42,15 +42,18 @@ const SimpleCard = ({ cardContent }) => {
         <button className="simpleCardBtn" onClick={() => setShowDetail(true)}>
           <p>Interview date: {date}</p> 
           <div className="statusLights">
-            <input type = "checkbox" checked={FStatus} onClick={setFollowupstatus(!FStatus)}> </input>
-            <input type = "checkbox" checked={AStatus} onClick={setAcceptstatus(!AStatus)}></input>
-            <input type = "checkbox" checked={RStatus} onClick={setRejectstatus(!RStatus)}></input>
+            <label>Followup Status</label>
+            <input type = "checkbox" checked={FStatus} onChange = {()=>setFollowupstatus(!FStatus)}></input>
+            <label>Accept Status</label>
+            <input type = "checkbox" defaultChecked={AStatus} onChange = {()=>setAcceptstatus(!AStatus)}></input>
+            <label>Reject Status</label>
+            <input type = "checkbox" defaultChecked={RStatus} onChange = {()=>setRejectstatus(!RStatus)}></input>
           </div>
         </button>
       </div>
-      {showDetail && 
+      {/* {showDetail && 
         <DetailCard algo_questions={algo_questions}  system_design={system_design} behavioral_questions={behavioral_questions} setShowDetail={setShowDetail}/>
-      }
+      } */}
     </>
   )
 }
