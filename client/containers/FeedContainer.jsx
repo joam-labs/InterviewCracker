@@ -4,16 +4,22 @@ import NavBar from "../components/NavBar.jsx";
 import axios from 'axios';
 
 const FeedContainer = () => {
-  
-  // hello my internet is slwo again :'(
+  const [feedItems, setFeedItems] = useState('')
+  let feedArray = [];
 
-  useEffect(async () => {
-    await axios.get('/api/cards')
-      .then(data => console.log('Cards from FeedContainer: ', data) )
+  useEffect(() => {
+    axios.get('/api/cards') // to this endpoint, we need modified query to include company name, team, role
+      .then(data => {
+        setFeedItems(data)
+      })
       .catch(error => console.log('Error in FeedContainer useEffect: ', error))
   }, [])
-
-  // const render = boo.map(el => {
+  console.log('These are feed items', feedItems)
+  const data = feedItems.data
+  if(data) {
+    feedArray = data.map(item => <FeedCard key = {item.id} everything = {item}/>)
+  }
+        // const render = feedItems.map(el => {
   //   return <FeedCard />
   // })
   // iterate by date through database, render a feed card for each of entries
@@ -21,7 +27,7 @@ const FeedContainer = () => {
     <>
       <p>Scrolling feed</p>
       <NavBar />
-      <FeedCard />
+      {feedArray}
     </>
   )
 }
