@@ -23,7 +23,7 @@ const FeedCard = ({everything}) => {
   return (
     <>
     <div className = 'feedCards'>
-      <p>Date:</p> {date}
+      <p>Date:</p> {date.substring(0,10)}
       <p>Company: </p> {company_name} 
       <p>Role: </p> {role_details}
       <p>Algo problems: </p> {algo_questions}

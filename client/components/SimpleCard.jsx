@@ -40,7 +40,7 @@ const SimpleCard = ({ cardContent }) => {
     <>
       <div className="simpleCard">
         <button className="simpleCardBtn" onClick={() => setShowDetail(true)}>
-          <p>Interview date: {date}</p> 
+          <p>Interview date: {date.substring(0,10)}</p> 
           <div className="statusLights">
             <label>Followup Status</label>
             <input type = "checkbox" checked={FStatus} onChange = {()=>setFollowupstatus(!FStatus)}></input>

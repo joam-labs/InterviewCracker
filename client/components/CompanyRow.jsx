@@ -34,7 +34,7 @@ const CompanyRow = ( { bigData } ) => {
       <div className="card__wrapper">
       <div className='cardCol'>
         {card1Content ? 
-        <SimpleCard/>   :
+        <SimpleCard cardContent={card1Content}/>   :
           <div className="blankCard">
             <button className="openAddCard" onClick={(stage, id) => handleClick('Phone interview', id)}>
               + Add Card
@@ -45,7 +45,7 @@ const CompanyRow = ( { bigData } ) => {
       <div className='cardCol'>
         {card2Content ? 
           // <div>it works</div> :
-           <SimpleCard cardContent={card2Content}/> :
+          <SimpleCard cardContent={card2Content}/> :
           <div className="blankCard">
             <button className="openAddCard" onClick={(stage, id) => handleClick('First round', id)}>
               + Add Card
