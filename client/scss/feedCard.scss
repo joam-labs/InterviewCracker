@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 html{
-  background-color: rgb(4, 151, 139);
+  background-color:$darker-blue;
 }
 
 .logo{
   width:200px;
   }
 .wrapper__feed{
-  background-color: yellow;
+  background-color: $darker-blue;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -15,16 +17,21 @@ html{
 }
 
 .feedCards{
-  width: 60%;
-  border: 2px solid black;
-  border-radius: 5px;
+  width: 40%;
+  border: 1px solid $white;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items:center;
   margin: 3rem 0 3rem 0;
-
+  background-color: $lighter-blue;
+  color:#33322e;
 }
 
 .feedCards > p{
     font-weight: bold;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
 }
