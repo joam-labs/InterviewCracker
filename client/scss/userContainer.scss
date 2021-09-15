@@ -4,9 +4,7 @@
 }
 .columnHeaders{
   display:flex;
-  justify-content: space-between;
-  margin-right: 15rem;
-  margin-left: 15rem;
+  
 }
 .addCompanyBtn{
   margin-bottom: 3rem;
@@ -23,19 +21,18 @@
   padding: 50px;
 }
 .addCompany > label{
-  margin: 5px;
+  margin: 20px;
 }
 
 .addCompany > input {
   width: 90%;
   padding: 10px;
-
 }
 
 .submitCompanyBtn{
   padding: 5px;
   width: 30%;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .popup{
@@ -44,6 +41,31 @@
   top: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid #f1f1f1;
-  border-radius: 5px;
+  border-radius: 15px;
   width: 30%;
+  background-color: rgb(4, 151, 139);
+}
+
+.header{
+  text-align: center;
+  width: 33%;
+
+}
+
+.spacing{
+  width: 17rem;
+}
+
+.details{
+  text-align: center;
+   width: 18%;
+   border: solid 1px white;
+
+}
+
+#test{
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  
 }

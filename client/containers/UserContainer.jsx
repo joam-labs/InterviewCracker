@@ -48,6 +48,10 @@ const UserContainer = () => {
           team/role
         </button>
       <div className='columnHeaders'>
+        <div className = 'spacing'>
+
+        </div>
+        <div id = 'test'>
         <div className='header'>
           Phone Screen
         </div>
@@ -57,21 +61,24 @@ const UserContainer = () => {
         <div className='header'>
           2nd Round
         </div>
-        <div className='header'>
-          Details
-          <DetailCard />
         </div>
-      </div>
+        <div className='details'>
+          Details
+        </div>
+
+        </div>
+   
+
       {createCompanyClicked && 
         <div className = 'popup' >
           <AddCompany companyBool={setNewCompany}/>
         </div>
       }
-      <div>
+      <div id = 'listofRows'>
        {listOfRows}
       </div>
+    
     </div>
-    <SimpleCard/>
     </>
   )
 }
