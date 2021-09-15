@@ -7,7 +7,7 @@ cardsController.getAllCards =async (req, res, next) => {
     try {
      //const {id} = req.cookies();
            //const query = 'INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id';
-      const query = `SELECT * FROM cards ORDER BY date DESC LIMIT 20`;
+      const query = `SELECT company_name, Role_details, Team, interviewstage, date, behavioral_questions, algo_questions, system_design, followupstatus, acceptstatus, rejectstatus FROM company JOIN cards ON company.id=cards.company_id WHERE User_id=1 LIMIT 10`;
      // selecting 20 cards limit 20 and in decreasing order by time
      const { rows } = await db.query(query);
 

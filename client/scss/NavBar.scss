@@ -1,10 +1,20 @@
 #navBar{
-    background-color: blue;
-    display: flex;
-    list-style-type: none;
+  background-color: #48c76a;
+  display: flex;
+  list-style-type: none;
+  text-decoration: none;
 }
 .nav-item{
-    margin: 30px;
-    color: white;
+  margin: 30px;
+}
+
+a{
+  color: #c78548;
+  text-decoration:none;
+  font-weight: bold;
+}
+
+a:hover{
+  color: white;
 }
   
