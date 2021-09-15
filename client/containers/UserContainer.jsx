@@ -46,6 +46,7 @@ const UserContainer = () => {
         </div>
       }
     </div>
+    <SimpleCard/>
     </>
   )
 }
