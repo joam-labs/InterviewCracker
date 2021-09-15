@@ -4,7 +4,8 @@ const companyController = {};
 companyController.getAllData =async (req, res, next) => {
   
     try {
-      const {id} = req.cookies;
+      // const {id} = req.cookies;
+      const id = '1';
       const params = [ id ];
       //const query = 'INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id';
       const query = `SELECT * FROM company WHERE User_id=$1 LIMIT 10`;
