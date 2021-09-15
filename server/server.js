@@ -31,7 +31,11 @@ app.post('/api/users', usersController.addUser, (req, res)=>{
 
 app.post('/api/company/addCompany', companyController.addCompany, (req, res) => {
   res.status(200);
-})
+});
+
+app.post('/api/addCard', cardsController.postCard, (req, res) => {
+  res.status(200);
+});
 
 app.post('/api/login', usersController.verifyUser , async (req, res)=>{
   res.status(200).send('done');//route for logining
