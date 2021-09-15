@@ -15,25 +15,25 @@ const FeedCard = ({everything}) => {
    algo_questions, 
    followupstatus, 
    rejectstatus, 
-   system_design 
+   system_design,
+   company_name
   } = everything;
  
   return (
     <>
     <div className = 'feedCards'>
-      <p>Date: {date}</p>
-      <p>Company: </p>
-      <p>Team: </p>
+      <p>Date:</p> {date}
+      <p>Company: </p> {company_name} 
       <p>Role: </p>
-      <h2>Algo problems</h2>
+      <p>Algo problems: </p> {algo_questions}
       {/* loop through algo problems and render a list item for each*/}
-        {algo_questions}
-      <h2>Behavior questions</h2> 
+        
+      <p>Behavioral questions: </p>  {behavioral_questions}
       {/* loop through behavior problems and render a list item for each*/}
-        {behavioral_questions}
-      <h2>System design questions</h2> 
+        
+      <p>System design questions: </p> {system_design}
       {/* loop through system design problems and render a list item for each*/}
-        {system_design}
+        
     </div>
     </>
   )

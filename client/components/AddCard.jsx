@@ -7,7 +7,7 @@ const AddCard = () => {
       <div className="addCard">
 
         {/* labels needed..? */}
-        <input>Interview date: </input> 
+        {/* <input>Interview date: </input> 
         <input>Interview contact: </input>
 
         <label htmlFor= "behaveqs">Behavioral Qs:</label>
@@ -27,7 +27,7 @@ const AddCard = () => {
 
         <button className = "submitCardBtn" onClick={}>
           Add Card
-        </button>
+        </button> */}
 
       </div>
     </>    

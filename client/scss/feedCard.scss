@@ -1,4 +1,25 @@
-#feedCards{
+html{
+  background-color: rgb(4, 151, 139);
+}
+.wrapper__feed{
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.feedCards{
+  width: 60%;
   border: 2px solid black;
-  background-color: green;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  margin: 3rem 0 3rem 0;
+
+}
+
+.feedCards > p{
+    font-weight: bold;
 }
