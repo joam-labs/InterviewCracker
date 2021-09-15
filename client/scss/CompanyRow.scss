@@ -1,19 +1,40 @@
 ///changes starts here
 .companyRow{
   display: flex;
-  border: 1px solid black;
   border-radius: 5px;
-  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   }
   .card__wrapper{
     width: 80%;
     display: flex;
-    justify-content: space-around;
-    border: 1px solid black;
+    justify-content: space-evenly;
+    margin-right: 20rem;
   }
   .simpleCardBtn{
       border-radius: 10px;
       border:5px solid rgba(255, 123, 163, 0.979);
       background-color: rgba(246, 246, 246, 0.979);
+      width: 75%;
+      padding:10px;
   }
   ///stop
+
+
+  .companyCol{
+    width: 15rem;
+    margin-left: 2rem;
+  }
+  
+  .cardCol{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    align-items: center;
+  }
+  
+  .simpleCard{
+    display: flex;
+    justify-content: center;
+  }

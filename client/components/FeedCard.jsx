@@ -20,19 +20,23 @@ const FeedCard = ({everything}) => {
    role_details
   } = everything;
  
+  function lineBreaker(str) {
+    return str.replace(/\? /g, '?\n').replace(/\. /g, '.\n').replace(/\! /g, '!\n');
+  }
+
   return (
     <>
     <div className = 'feedCards'>
       <p>Date:</p> {date.substring(0,10)}
       <p>Company: </p> {company_name} 
       <p>Role: </p> {role_details}
-      <p>Algo problems: </p> {algo_questions}
+      <p>Algo problems: </p> {lineBreaker(algo_questions)}
       {/* loop through algo problems and render a list item for each*/}
         
-      <p>Behavioral questions: </p>  {behavioral_questions}
+      <p>Behavioral questions: </p>  {lineBreaker(behavioral_questions)}
       {/* loop through behavior problems and render a list item for each*/}
         
-      <p>System design questions: </p> {system_design}
+      <p>System design questions: </p> {lineBreaker(system_design)}
       {/* loop through system design problems and render a list item for each*/}
         
     </div>
