@@ -8,7 +8,14 @@ const DetailCard = () => {
   const [algoQs, setAlgoQs] = useState('How would you solve a astronautical problem as an astronaut if you were not an astronaut?')
   const [systemDesignQs, setSystemDesignQs] = useState('Walk through the process of building the largest Lego tower that you can fathom.')
   const [behaveQs, setBehaveQs] = useState('Tell me about a family vacation during which you had to handle two family members getting mad at each other.')
+  
+  function lineBreaker(str) {
+    return str.replace(/\? /g, '?\n').replace(/\. /g, '.\n').replace(/\! /g, '!\n');
+  }
+
+
   // deconstruct props to pass down questions in different sections?
+  
   return (
     <>
       <div id = "detailCard">
@@ -19,9 +26,9 @@ const DetailCard = () => {
         </div>
 
         <div className="Questions">
-          <p>Algo Questions: {algoQs}</p>
-          <p>SysDes Questions: {systemDesignQs}</p>
-          <p>Behavioral Questions: {behaveQs}</p>
+          <p>Algo Questions: {lineBreaker(algoQs)}</p>
+          <p>SysDes Questions: {lineBreaker(systemDesignQs)}</p>
+          <p>Behavioral Questions: {lineBreaker(behaveQs)}</p>
         </div>  
       </div>
     </>
