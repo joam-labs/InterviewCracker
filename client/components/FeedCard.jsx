@@ -16,7 +16,8 @@ const FeedCard = ({everything}) => {
    followupstatus, 
    rejectstatus, 
    system_design,
-   company_name
+   company_name,
+   role_details
   } = everything;
  
   return (
@@ -24,7 +25,7 @@ const FeedCard = ({everything}) => {
     <div className = 'feedCards'>
       <p>Date:</p> {date}
       <p>Company: </p> {company_name} 
-      <p>Role: </p>
+      <p>Role: </p> {role_details}
       <p>Algo problems: </p> {algo_questions}
       {/* loop through algo problems and render a list item for each*/}
         

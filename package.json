@@ -51,6 +51,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
+    "file-loader": "^6.2.0",
     "nodemon": "^2.0.12",
     "redux-devtools-extension": "^2.13.9",
     "sass-loader": "^12.1.0",
