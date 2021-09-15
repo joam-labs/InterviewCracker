@@ -18,11 +18,15 @@ const UserContainer = () => {
 
   // iterate by date through database, render a feed card for each of entries
   return (
+    <>
+    <NavBar/>
     <div className='userContainer'>
-      <div className='columnHeaders'>
-        <button className='addCompanyBtn' onClick={() => setNewCompany(true)}>
-          Add new company
+       <button className='addCompanyBtn' onClick={() => setNewCompany(true)}>
+          Add new company/
+          <br></br>
+          team/role
         </button>
+      <div className='columnHeaders'>
         <div className='header'>
           Phone Screen
         </div>
@@ -32,14 +36,18 @@ const UserContainer = () => {
         <div className='header'>
           2nd Round
         </div>
+        <div className='header'>
+          Details
+        </div>
       </div>
       {createCompanyClicked && 
-        <div>
+        <div className = 'popup' >
           <AddCompany companyBool={setNewCompany}/>
         </div>
       }
       <DetailCard />
     </div>
+    </>
   )
 }
 
