@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const AddCard = ( { stage, id, setShowAddCard }) => {
   // event to input details, passed down through add company from user container
   // console.log({stage, id, setShowAddCard})
-
+  const [date, setdate] = useState('');
   const [bQuestions, setBQs] = useState('');
   const [aQuestions, setAQs] = useState('');
   const [sQuestions, setSQs] = useState('');
@@ -17,7 +17,7 @@ const AddCard = ( { stage, id, setShowAddCard }) => {
       },
       body: JSON.stringify({
         Company_id: id,
-        Date: Date.now(),
+        Date: date,
         InterviewStage: stage,
         Behavioral_questions: bQuestions,
         Algo_questions: aQuestions,
@@ -32,9 +32,13 @@ const AddCard = ( { stage, id, setShowAddCard }) => {
   return (
     <>
       <div className="addCard">
+        
+        <label htmlFor='Date'>Date of Interview</label>
+        <input type="text" id='Date' onChange={e => setDate(e.target.value)} />
      
         <label htmlFor='BehavioralQs'>Behavioral Questions</label>
         <input type="text" id='BehavioralQs' onChange={e => setBQs(e.target.value)} />
+
         
         <label htmlFor="AlgoQs">Algo Questions</label>
         <input type="text" id="AlgoQs" name="fname" onChange={e => setAQs(e.target.value)}/>

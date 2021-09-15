@@ -29,8 +29,10 @@ cardsController.getAllCards =async (req, res, next) => {
      //const {id} = req.cookies();
      const { Company_id, InterviewStage, Date, Behavioral_questions, Algo_questions, System_design, FollowupStatus, AcceptStatus, RejectStatus } = req.body;
            //const query = 'INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id';
+          
     const params = [ Company_id, InterviewStage, Date, Behavioral_questions, Algo_questions, System_design , FollowupStatus, AcceptStatus, RejectStatus];
-      const query = `INSERT INTO "public"."cards" (Company_id, InterviewStage, Date, Behavioral_questions, Algo_questions, System_design , FollowupStatus, AcceptStatus, RejectStatus)
+    console.log(params) 
+    const query = `INSERT INTO "public"."cards" (Company_id, InterviewStage, Date, Behavioral_questions, Algo_questions, System_design , FollowupStatus, AcceptStatus, RejectStatus)
       VALUES ( $1, $2, $3, $4, $5, $6, $7, $8, $9);`;
      // selecting 20 cards limit 20 and in decreasing order by time
      const { rows } = await db.query(query, params);
