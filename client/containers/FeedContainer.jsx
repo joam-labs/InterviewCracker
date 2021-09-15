@@ -14,7 +14,7 @@ const FeedContainer = () => {
     }, [])
   
   const data = feedItems.data
-  if(data) feedArray = data.map(item => <FeedCard key = {item.id} everything = {item}/>)
+  if(data) feedArray = data.map((item, i) => <FeedCard key = {i} everything = {item}/>)
         // const render = feedItems.map(el => {
   //   return <FeedCard />
   // })

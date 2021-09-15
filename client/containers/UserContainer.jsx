@@ -3,20 +3,41 @@ import NavBar from "../components/NavBar.jsx";
 import DetailCard from "../components/DetailCard.jsx";
 import AddCard from "../components/AddCard.jsx";
 import AddCompany from "../components/AddCompany.jsx";
-import SimpleCard from "../components/SimpleCard.jsx";
 import CompanyRow from "../components/CompanyRow.jsx";
 import axios from 'axios';
 
 const UserContainer = () => {
   const [createCompanyClicked, setNewCompany] = useState(false);
+  const [listOfCompanies, setListOfCompanies] = useState(null);
+
   useEffect(async() => {
     axios.get('/api/companies')
-      .then(data=>console.log(data))
-      .catch(error=>console.log('Error in UserContainer useEffect: ', error))
-    return <AddCompany/>
-  }, []);
+    // .then(data => data.json())
+      .then(data => {
+        // console.log('data in userContainer =', data);
+        //  listOfRows = data.data.map((e, i) => {
+        //   // return (
+        //     <CompanyRow bigData={listOfCompanies[i]}/>
+        //   //)
+        // })
+        setListOfCompanies(data.data)
+      }).catch(error => console.log('Error in UserContainer useEffect: ', error))
+      // return <AddCompany/>
+    }, [1]);
+  
+  // useEffect(() => 
+  let listOfRows;
+  if (listOfCompanies !== null) {
+    listOfRows = listOfCompanies.map((e,i) => {
+      return (
+        <CompanyRow key={i} bigData={listOfCompanies[i]}/>
+      )
+    })
+  }
 
   // iterate by date through database, render a feed card for each of entries
+  // When rendering CompanyRow, pass down prop CompanyId
+
   return (
     <>
     <NavBar/>
@@ -38,6 +59,7 @@ const UserContainer = () => {
         </div>
         <div className='header'>
           Details
+          <DetailCard />
         </div>
       </div>
       {createCompanyClicked && 
@@ -45,6 +67,9 @@ const UserContainer = () => {
           <AddCompany companyBool={setNewCompany}/>
         </div>
       }
+      <div>
+       {listOfRows}
+      </div>
     </div>
     <SimpleCard/>
     </>
@@ -52,3 +77,4 @@ const UserContainer = () => {
 }
 
 export default UserContainer;
+//DetailCard on 48 only for style testing, feel free to delete if not done already
