@@ -38,6 +38,7 @@ const UserContainer = () => {
         </div>
         <div className='header'>
           Details
+          <DetailCard />
         </div>
       </div>
       {createCompanyClicked && 
@@ -45,10 +46,10 @@ const UserContainer = () => {
           <AddCompany companyBool={setNewCompany}/>
         </div>
       }
-      <DetailCard />
     </div>
     </>
   )
 }
 
 export default UserContainer;
+//DetailCard on 48 only for style testing, feel free to delete if not done already

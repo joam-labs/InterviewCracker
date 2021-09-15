@@ -11,7 +11,7 @@ const DetailCard = () => {
   // deconstruct props to pass down questions in different sections?
   return (
     <>
-      <div id = "detailsCard">
+      <div id = "detailCard">
         <div id = "Identifiers">
           <p>Company: {company}</p>
           <p>Team: {team}</p>
