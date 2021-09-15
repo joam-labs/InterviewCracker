@@ -24,7 +24,7 @@ const CompanyRow = () => {
       </div>
       <div className='cardCol'>
         {card1Content ? 
-          <SimpleCard/> :
+        <SimpleCard/>   :
           <div className="blankCard">
             <button className="openAddCard" onClick={() => handleClick()}>
               + Add Card
