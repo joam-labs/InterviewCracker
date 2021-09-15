@@ -45,7 +45,7 @@ companyController.getAllData =async (req, res, next) => {
       const {id} = req.cookies;
       const { Company_Name, Team, Role } = req.body;
       console.log('req.body=', req.body);
-      const params = [ id, Company_Name, Team, Role ];
+      const params = [ id, Company_Name, Role, Team ];
       //const query = 'INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id';
       const query = `INSERT INTO "public"."company" (User_id, Company_Name, Role_details, Team )
       VALUES ( $1, $2, $3, $4);`;

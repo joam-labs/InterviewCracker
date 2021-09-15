@@ -51,9 +51,9 @@ const SimpleCard = ({ cardContent }) => {
           </div>
         </button>
       </div>
-      {/* {showDetail && 
+      {showDetail && 
         <DetailCard algo_questions={algo_questions}  system_design={system_design} behavioral_questions={behavioral_questions} setShowDetail={setShowDetail}/>
-      } */}
+      }
     </>
   )
 }

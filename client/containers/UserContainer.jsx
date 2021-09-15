@@ -23,10 +23,19 @@ const UserContainer = () => {
         setListOfCompanies(data.data)
       }).catch(error => console.log('Error in UserContainer useEffect: ', error))
       // return <AddCompany/>
-    }, [1]);
+    }, [createCompanyClicked]);
   
-  // useEffect(() => 
   let listOfRows;
+  useEffect(() => {
+    if (listOfCompanies !== null) {
+      listOfRows = listOfCompanies.map((e,i) => {
+        return (
+          <CompanyRow key={i} bigData={listOfCompanies[i]}/>
+        )
+      })
+    }
+  }, [listOfCompanies])
+
   if (listOfCompanies !== null) {
     listOfRows = listOfCompanies.map((e,i) => {
       return (
