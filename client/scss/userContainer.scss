@@ -1,0 +1,49 @@
+.userContainer{
+  border: 1px solid white;
+  margin-top: 3%;
+}
+.columnHeaders{
+  display:flex;
+  justify-content: space-between;
+  margin-right: 15rem;
+  margin-left: 15rem;
+}
+.addCompanyBtn{
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.addCompany{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  align-items: center;
+  padding: 50px;
+}
+.addCompany > label{
+  margin: 5px;
+}
+
+.addCompany > input {
+  width: 90%;
+  padding: 10px;
+
+}
+
+.submitCompanyBtn{
+  padding: 5px;
+  width: 30%;
+  margin-top: 10px;
+}
+
+.popup{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  width: 30%;
+}
