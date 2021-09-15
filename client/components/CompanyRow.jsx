@@ -33,9 +33,8 @@ const CompanyRow = ( { bigData } ) => {
       </div>
       <div className="card__wrapper">
       <div className='cardCol'>
-        {card1Content !== undefined ? 
-          // <div>it works</div> :
-           <SimpleCard cardContent={card1Content}/> :
+        {card1Content ? 
+        <SimpleCard/>   :
           <div className="blankCard">
             <button className="openAddCard" onClick={(stage, id) => handleClick('Phone interview', id)}>
               + Add Card
