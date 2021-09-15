@@ -1,0 +1,33 @@
+#logindiv{
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.addCard{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  width: 20%;
+  align-items: center;
+  padding: 20px;
+  border-radius: 1.5rem;
+}
+
+.addCard > input{
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 0.5rem;
+}
+.addCard > label{
+  margin-bottom: 5px;
+}
+
+#submit-login{
+  width: 25%;
+  border-radius: 5px;
+  padding: 5px;
+}
