@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const AddCard = ( { stage, id, setShowAddCard }) => {
   // event to input details, passed down through add company from user container
   // console.log({stage, id, setShowAddCard})
-  const [date, setdate] = useState('');
+  const [date, setDate] = useState('');
   const [bQuestions, setBQs] = useState('');
   const [aQuestions, setAQs] = useState('');
   const [sQuestions, setSQs] = useState('');
