@@ -1,0 +1,21 @@
+#simpleCardOutline{
+  outline: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statusLights > input[type="checkbox"]{
+  visibility: hidden;
+}
+
+.statusLights > label{
+ background-color: #fff;
+ border: 1px solid #ccc;
+ height: 28px;
+ width: 28px;
+ border-radius: 50%;
+ cursor: pointer;
+ 
+}
