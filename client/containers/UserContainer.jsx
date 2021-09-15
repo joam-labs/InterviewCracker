@@ -4,6 +4,7 @@ import DetailCard from "../components/DetailCard.jsx";
 import AddCard from "../components/AddCard.jsx";
 import AddCompany from "../components/AddCompany.jsx";
 import SimpleCard from "../components/SimpleCard.jsx";
+import CompanyRow from "../components/CompanyRow.jsx";
 import axios from 'axios';
 
 const UserContainer = () => {
